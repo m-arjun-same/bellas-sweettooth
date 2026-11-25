@@ -242,6 +242,26 @@ $$('.card-img,.fav-img').forEach(function(im){
   gsap.fromTo(im,{y:-14},{y:14,ease:'none',scrollTrigger:{trigger:im,start:'top bottom',end:'bottom top',scrub:true}});
 });
 
+/* Build Your Cake — interactive builder (section 05) */
+(function(){ var stack=$('#cakeStack'); if(!stack) return;
+  var state={size:'6″',layers:'3',style:'Vintage heart',occasion:'Birthday'};
+  var styleClass={'Bento pink':'st-bento','Vintage heart':'st-vintage','Custom theme':'st-custom'};
+  var baseW={'5″':205,'6″':250,'Bento':165};
+  function render(anim){ stack.innerHTML=''; var n=parseInt(state.layers,10), w=baseW[state.size]||230;
+    for(var i=0;i<n;i++){ var d=document.createElement('div'); d.className='cake-layer '+styleClass[state.style];
+      d.style.width=Math.round(w*(1-i*.13))+'px'; stack.appendChild(d); }
+    $('#cakeTopper').textContent=state.occasion;
+    $('#cakeSummary').textContent=state.size+' · '+state.layers+' layers · '+state.style+' · '+state.occasion;
+    if(anim&&window.gsap) gsap.from(stack.children,{scaleY:0,opacity:0,transformOrigin:'bottom',duration:.5,stagger:.08,ease:'back.out(1.6)'});
+  }
+  $$('.opt-row').forEach(function(row){ var key=row.getAttribute('data-opt');
+    $$('button',row).forEach(function(b){ b.addEventListener('click',function(){
+      $$('button',row).forEach(function(x){x.classList.remove('active')}); b.classList.add('active');
+      state[key]=b.getAttribute('data-val'); render(true); }); });
+  });
+  render(false);
+})();
+
 /* loader failsafe: nothing blocks first paint; refresh triggers after full load */
 window.addEventListener('load',function(){ setTimeout(function(){ ScrollTrigger.refresh(); },600); });
 })();
