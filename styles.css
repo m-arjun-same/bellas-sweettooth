@@ -34,6 +34,10 @@ header.hide{opacity:0;transform:translateY(-12px);pointer-events:none}
 .h-nav a:hover{color:var(--accent)}
 .menu-btn{background:var(--ink);color:#0c0c0c;border-radius:999px;padding:11px 22px;font-size:15px;font-weight:600;white-space:nowrap}
 .menu-btn i{font-style:normal;color:var(--accent)}
+header.on-light{color:var(--dark)}
+header.on-light .h-role,header.on-light .h-open{color:#55534d}
+header.on-light .menu-btn{background:var(--dark);color:var(--cream)}
+.mo-close{position:absolute;top:26px;right:3.4vw;background:var(--ink);color:#0c0c0c;border-radius:999px;padding:11px 22px;font-size:15px;font-weight:600;z-index:3}
 
 /* rails */
 .rail-left{position:fixed;left:26px;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-size:13px;letter-spacing:.22em;font-weight:600;z-index:110;display:flex;align-items:center;gap:12px;color:var(--grey);transition:opacity .4s}
@@ -235,7 +239,7 @@ header.hide{opacity:0;transform:translateY(-12px);pointer-events:none}
 .chat-input button{background:#141412;color:#fff;width:46px;height:46px;border-radius:50%;font-size:18px;flex:none}
 
 /* footer */
-footer{position:relative;background:var(--cream2);color:var(--dark);padding:110px var(--pad-r) 0 var(--pad-l);overflow:hidden}
+footer{position:relative;background:var(--cream2);color:var(--dark);padding:110px var(--pad-r) 110px var(--pad-l);overflow:hidden}
 .foot-open{font-size:14.5px;font-weight:500}
 .foot-h{margin-top:36px;max-width:1200px}
 .foot-h img{display:inline-block;width:130px;height:88px;object-fit:cover;border-radius:12px;vertical-align:middle;margin:0 6px}
