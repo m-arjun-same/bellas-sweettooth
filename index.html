@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bella's Sweet Tooth | Home Based Baker, South Los Angeles</title>
+<meta name="description" content="Custom cakes, bento cakes, vintage heart cakes and chocolate-covered treats, made to order in South Los Angeles, 90044.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-circle" id="cursorCircle">View post ↗</div>
+<div class="grid-overlay" id="gridOverlay"></div>
+<div class="inspector" id="inspector"></div>
+<aside class="code-panel" id="codePanel">
+  <h4>The code behind this section</h4>
+  <p class="cp-sub">Measured in your browser, right now</p>
+  <div class="cp-metrics">
+    <div><span id="mPaint">—</span><label>Largest paint</label></div>
+    <div><span id="mFps">—</span><label>Frames/s</label></div>
+    <div><span id="mEls">—</span><label>Elements</label></div>
+    <div><span id="mWeight">—</span><label>Page weight</label></div>
+  </div>
+  <pre class="cp-code" id="cpCode"></pre>
+</aside>
+
+<header id="siteHeader">
+  <a class="logo" href="#top">Bella's Sweet Tooth <i>••</i></a>
+  <span class="h-role">Home Based Baker · South Los Angeles</span>
+  <a class="h-open" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener"><i class="dot-green"></i> Booking November</a>
+  <nav class="h-nav">
+    <a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn">Menu <i>••</i></button>
+</header>
+
+<div class="rail-left" id="railLeft"><i></i><span id="railLabel">HOME</span></div>
+<div class="rail-right" id="railRight"></div>
+<div class="awwwards" id="awwwardsBadge">B. — Bento of the Day</div>
+<button class="fab-menu" id="fabMenu" aria-label="Menu">≡</button>
+
+<div class="menu-overlay" id="menuOverlay">
+  <nav>
+    <a href="#top"><em>01</em>Home</a>
+    <a href="#about"><em>02</em>About me</a>
+    <a href="#do"><em>03</em>What I do</a>
+    <a href="#work"><em>04</em>Work</a>
+    <a href="#experience"><em>05</em>Experience</a>
+    <a href="#contact"><em>06</em>Contact</a>
+    <a href="#favourites" class="plain">House favourites</a>
+  </nav>
+  <img src="assets/vintageheart.jpg" alt="Vintage heart cake by Bella's Sweet Tooth">
+  <div class="mo-foot"><span>South Los Angeles · 90044</span><span>Instagram — @bellas.sweettooth</span><span>Booking November</span></div>
+  <canvas id="moName"></canvas>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" data-rail="HOME">
+    <div class="hero-img-wrap">
+      <canvas id="heroParticles"></canvas>
+      <img id="heroImg" src="assets/vintageheart.jpg" alt="Black vintage heart cake with burgundy roses by Bella's Sweet Tooth">
+    </div>
+    <div class="hero-copy">
+      <h1><span class="line"><span>Custom cakes, made</span></span><span class="line"><span>to order in South LA.</span></span></h1>
+      <p>Home based baker in South Los Angeles, 90044. Bento cakes, vintage heart cakes and chocolate-covered treats for any special occasion.</p>
+      <div class="hero-ctas">
+        <a class="btn-accent" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Start an order</a>
+        <a class="btn-ghost" href="#work">See the cakes ↓</a>
+      </div>
+    </div>
+    <div class="hero-globe">
+      <canvas id="globe" width="190" height="190"></canvas>
+      <div><strong>Los Angeles <span id="laClock">--:--</span></strong><small>South Los Angeles · 90044</small></div>
+    </div>
+    <div class="hero-arrow">↘</div>
+  </section>
+
+  <!-- 01 ABOUT -->
+  <section class="sec" id="about" data-rail="ABOUT ME">
+    <span class="sec-label">(01) ABOUT ME</span>
+    <p class="about-lead reveal">Most of what I bake, you'll never pull off a shelf: the <b>bento cake</b> for two, the <b>vintage heart cake</b>, the <b>strawberries</b> dipped to order — every cake starts as a <b>DM</b>.</p>
+    <p class="about-sub reveal">I bake from home in South Los Angeles and reply to every message myself, within 24–48 hours. Before you DM, check the “how to order / policies” and “availability” highlights — they hold the open dates and the rules.</p>
+    <div class="stats">
+      <div class="stat"><canvas class="stat-num" data-text="2,016"></canvas><p><b>posts</b> — cakes &amp; treats shared on Instagram</p></div>
+      <div class="stat"><canvas class="stat-num" data-text="9,446"></canvas><p><b>followers</b> — and counting, on Instagram</p></div>
+      <div class="stat"><canvas class="stat-num" data-text="24–48"></canvas><p><b>hours</b> — response time, every DM</p></div>
+      <div class="stat"><canvas class="stat-num" data-text="90044"></canvas><p><b>South Los Angeles</b> — home based</p></div>
+    </div>
+  </section>
+
+  <!-- 02 WHAT I DO -->
+  <section class="sec" id="do" data-rail="WHAT I DO">
+    <span class="sec-label">(02) WHAT I DO</span>
+    <div class="do-head"><span class="do-grey">Usually for the same party</span><h2 class="reveal-h">From the first DM<br>to the last ribbon.</h2></div>
+    <div class="cards">
+      <article class="card reveal"><em>01</em><h3>Bento cakes</h3><p>Two-layer bentos, round or heart, sized for small celebrations. The current signature.</p></article>
+      <article class="card reveal"><em>02</em><h3>Vintage heart cakes</h3><p>Piped shells, draped icing, roses and ribbons. The most re-ordered design on the feed.</p></article>
+      <article class="card reveal"><em>03</em><h3>Custom birthday cakes</h3><p>5″ and 6″ cakes, two or three layers, built around your theme — Spider-Man to star cakes.</p></article>
+      <article class="card reveal"><em>04</em><h3>Chocolate-covered treats</h3><p>Strawberries, pretzels, cake pops and rice crispy treats, dipped and decorated to match.</p></article>
+      <article class="card reveal"><em>05</em><h3>Party packages</h3><p>A full sweet table for any special occasion, colour-matched to your party.</p></article>
+      <article class="card reveal"><em>06</em><h3>Seasonal treats</h3><p>Halloween, Thanksgiving, Christmas, Easter, Valentine's — the feed changes with the calendar.</p></article>
+    </div>
+    <p class="strip-title">From first check to party day</p>
+    <div class="strip">
+      <div class="step reveal"><em>01</em><h4>Availability</h4><p>Check the highlight for open dates</p></div>
+      <div class="step reveal"><em>02</em><h4>Policies</h4><p>Read how ordering works</p></div>
+      <div class="step reveal"><em>03</em><h4>DM</h4><p>Send your date and your idea</p></div>
+      <div class="step reveal"><em>04</em><h4>Reply</h4><p>Within 24–48 hours</p></div>
+      <div class="step reveal"><em>05</em><h4>Made to order</h4><p>Baked for your date</p></div>
+      <div class="step reveal"><em>06</em><h4>Booked</h4><p>Your date is in the calendar</p></div>
+    </div>
+  </section>
+
+  <!-- 03 SELECTED WORK -->
+  <section class="sec" id="work" data-rail="WORK">
+    <span class="sec-label">(03) SELECTED WORK</span>
+    <h2 class="reveal-h">Fresh from the feed</h2>
+    <p class="work-intro reveal">Every cake below is a real order, posted on Instagram.</p>
+    <div class="work-list" id="workList">
+      <a class="work-row" href="https://www.instagram.com/p/DflqVrUiQ3_/" target="_blank" rel="noopener" data-img="assets/spiderman.jpg" data-domain="instagram.com">
+        <em>01</em><h3>Spider-Man Cake</h3><p>“Booking November!!” — the most-liked cake on the feed, a red Spider-Man birthday cake.</p>
+        <span class="w-meta">Custom cake · Los Angeles<b>● 3,827 likes</b></span><i>→</i></a>
+      <a class="work-row" href="https://www.instagram.com/p/DgBw4t3kUUe/" target="_blank" rel="noopener" data-img="assets/vintageheart.jpg" data-domain="instagram.com">
+        <em>02</em><h3>Vintage Heart Cake</h3><p>“Older, hotter, wiser” — black cake, burgundy roses, pearls and ribbons.</p>
+        <span class="w-meta">Heart cake · Vintage<b>● Made to order</b></span><i>→</i></a>
+      <a class="work-row" href="https://www.instagram.com/p/Df3kZIcmhFk/" target="_blank" rel="noopener" data-img="assets/minicakes.jpg" data-domain="instagram.com">
+        <em>03</em><h3>Mini Cakes</h3><p>Small cakes, boxed and ready — a feed favourite, posted every week.</p>
+        <span class="w-meta">Bento · Mini cakes<b>● On the feed</b></span><i>→</i></a>
+      <a class="work-row" href="https://www.instagram.com/p/DflqkgsCjbZ/" target="_blank" rel="noopener" data-img="assets/weeknd.jpg" data-domain="instagram.com">
+        <em>04</em><h3>The Weeknd Star Cake</h3><p>A star cake for a birthday, straight off the November feed.</p>
+        <span class="w-meta">Custom cake · Star cake<b>● 113 likes</b></span><i>→</i></a>
+    </div>
+    <p class="work-foot reveal">Also on the feed: book cakes, chocoflan, churro cheesecake, fairy bentos and red petal cakes.</p>
+    <img class="work-preview" id="workPreview" alt="">
+  </section>
+
+  <!-- 04 HOUSE FAVOURITES -->
+  <section class="sec" id="favourites" data-rail="FAVOURITES">
+    <span class="sec-label">(04) HOUSE FAVOURITES</span>
+    <h2 class="reveal-h">Favourites of my own</h2>
+    <div class="fav-grid">
+      <article class="fav reveal"><em>01</em><h3>Chocoflan</h3><p>Vanilla cake with chocolate flan and a strawberry drizzle.</p><p class="built">Vanilla <i>•</i> Chocolate flan <i>•</i> Strawberry</p><div class="fav-meta"><span>Specialty cake</span><span class="status on">● On the feed</span></div></article>
+      <article class="fav reveal"><em>02</em><h3>Churro Cheesecake</h3><p>The cheesecake the feed asks for, served with six chocolate-covered berries.</p><p class="built">Churro <i>•</i> Cheesecake <i>•</i> Berries, 6ct</p><div class="fav-meta"><span>Specialty</span><span class="status on">● On the feed</span></div></article>
+      <article class="fav reveal"><em>03</em><h3>Bento Cakes</h3><p>Two layers, round or heart — the cake the feed asks for most.</p><p class="built">2 layer <i>•</i> Heart or round <i>•</i> Made to order</p><div class="fav-meta"><span>Signature</span><span class="status dev">● Made to order</span></div></article>
+    </div>
+  </section>
+
+  <!-- 05 EXPERIENCE -->
+  <section class="sec" id="experience" data-rail="EXPERIENCE">
+    <span class="sec-label">(05) EXPERIENCE</span>
+    <p class="exp-intro reveal">Since the first post, <b>2,016 cakes and treats</b> have come out of one home kitchen in <b>South Los Angeles</b>.</p>
+    <a class="exp-link reveal" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Full feed on Instagram ↗</a>
+    <div class="exp-pin" id="expPin">
+      <div class="exp-year" id="expYear">2026</div>
+      <div class="exp-list" id="expList">
+        <div class="exp-item" data-year="2026"><em>2026</em><h4>Booking November</h4><p>Spider-Man cake — 3,827 likes · Los Angeles</p></div>
+        <div class="exp-item" data-year="2026"><em>2026</em><h4>Bento season</h4><p>2-layer &amp; heart bentos, every week · Los Angeles</p></div>
+        <div class="exp-item" data-year="2025"><em>2025</em><h4>Baby shower</h4><p>Mini cakes · Sep 2025</p></div>
+        <div class="exp-item" data-year="2025"><em>2025</em><h4>Churro cheesecake</h4><p>With 6ct berries · Jul 2025</p></div>
+        <div class="exp-item" data-year="2025"><em>2025</em><h4>Quinceañera</h4><p>Pink &amp; white cake · May 2025</p></div>
+        <div class="exp-item" data-year="2025"><em>2025</em><h4>Sweet 16</h4><p>Strawberry cake, macarons &amp; gold · Jan 2025</p></div>
+      </div>
+    </div>
+    <p class="strip-title">On the menu</p>
+    <div class="chips">
+      <span>Bento cakes</span><span>Heart cakes</span><span>Vintage cakes</span><span>Mini cakes</span><span>Chocoflan</span><span>Churro cheesecake</span><span>Chocolate-covered strawberries</span><span>Cake pops</span><span>Pretzels</span><span>Rice crispy treats</span><span>Cookies</span><span>Macarons</span><span>Party packages</span>
+    </div>
+  </section>
+
+  <!-- MOTTO -->
+  <section class="motto" id="motto" data-rail="MOTTO">
+    <span class="sec-label-center">MY MOTTO</span>
+    <h2 id="mottoH"><span class="m-line">Every cake</span><span class="m-line">is <b>made to order.</b></span></h2>
+    <div class="motto-spot" id="mottoSpot"><span>DM first.<br>I reply in 24–48 hrs.</span></div>
+    <p class="motto-hint">Hover to read the honest version</p>
+    <div class="motto-btns">
+      <button class="btn-outline" id="breakBtn">Break it</button>
+      <button class="btn-outline" id="codeBtn2">Show the code</button>
+    </div>
+    <div class="toasts" id="toasts"></div>
+    <div class="diff-card" id="diffCard">
+      <h5>order.js</h5>
+      <p class="del">− const cake = offTheShelf</p>
+      <p class="del">− sprinkles = everywhere</p>
+      <p class="del">− throw new Error('good enough')</p>
+      <p class="add">+ const cake = madeToOrder(date)</p>
+      <p class="add">+ sprinkles = byRequest</p>
+      <p class="add">+ return booked</p>
+    </div>
+  </section>
+
+  <!-- 06 TESTIMONIALS -->
+  <section class="sec light" id="said" data-rail="WHAT THEY SAID">
+    <span class="sec-label">(06) WHAT THEY SAID</span>
+    <div class="testi-wrap">
+      <div class="testi-tabs" id="testiTabs">
+        <button class="ttab active" data-t="0">TC</button>
+        <button class="ttab" data-t="1">BO</button>
+        <button class="ttab" data-t="2">DS</button>
+      </div>
+      <div class="testi-body">
+        <p class="testi-excerpt" id="testiExcerpt"></p>
+        <p class="testi-full" id="testiFull"></p>
+        <p class="testi-who"><b id="testiName"></b> <span id="testiRole"></span></p>
+        <div class="testi-progress"><i id="testiBar"></i></div>
+        <p class="testi-note">In their own words, from Instagram.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 SEASONS -->
+  <section class="sec" id="seasons" data-rail="WITH THE SEASONS">
+    <span class="sec-label">(07) WITH THE SEASONS</span>
+    <h2 class="reveal-h">After hours</h2>
+    <div class="season-grid">
+      <div class="season-col reveal">
+        <h4>ON THE CALENDAR</h4>
+        <div class="season-row"><b>Christmas</b><span>First Christmas post of the year · Nov 2025</span></div>
+        <div class="season-row"><b>Thanksgiving</b><span>Turkey cake pops, pretzels &amp; berries</span></div>
+        <div class="season-row"><b>Halloween</b><span>Strawberry ghost cake pops</span></div>
+        <div class="season-row"><b>Valentine's</b><span>Chocolate-covered strawberries</span></div>
+      </div>
+      <div class="season-col reveal">
+        <h4>MOST LOVED</h4>
+        <div class="season-row"><b>Spider-Man cake</b><span>3,827 likes — Booking November</span></div>
+        <div class="season-row"><b>6″ 3-layer birthday</b><span>176 likes — the smiling cake</span></div>
+        <div class="season-row"><b>The Weeknd star cake</b><span>113 likes — November feed</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 CONTACT -->
+  <section class="sec light" id="contact" data-rail="CONTACT">
+    <span class="sec-label">(08) CONTACT</span>
+    <span class="contact-where">South Los Angeles, PST (UTC−8)</span>
+    <div class="contact-grid">
+      <div>
+        <h2 class="reveal-h dark-h">Ask me anything.</h2>
+        <p class="contact-body">An assistant briefed on how I bake answers straight away — and every answer points you to the real thing: <a href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">DM me on Instagram</a> and I'll reply within 24 hours.</p>
+        <span class="built-pill">● Answers from her bio, feed &amp; highlights</span>
+      </div>
+      <div class="chat-card">
+        <div class="chat-log" id="chatLog">
+          <div class="msg ai"><img src="assets/vintageheart.jpg" alt=""><p>Hi! Ask me about ordering, sizes, or what's booking now.</p></div>
+        </div>
+        <div class="chat-chips" id="chatChips">
+          <button>How do I order?</button>
+          <button>What sizes do you make?</button>
+          <button>How fast do you reply?</button>
+          <button>What are you booking now?</button>
+        </div>
+        <form class="chat-input" id="chatForm">
+          <input id="chatText" type="text" placeholder="Message..." autocomplete="off">
+          <button type="submit" aria-label="Send">→</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="light" data-rail="FOOTER">
+    <p class="foot-open">Taking on new orders now</p>
+    <h2 class="foot-h">Bella's Sweet Tooth <img src="assets/redcake.jpg" alt="Red petal cake"> — What's the occasion?</h2>
+    <div class="foot-steps">
+      <div><em>01</em><h4>Check availability</h4><p>The highlight on Instagram</p></div>
+      <div><em>02</em><h4>DM your date &amp; idea</h4><p>On Instagram</p></div>
+      <div><em>03</em><h4>I reply within 24–48 hours</h4><p>From me, not an auto-reply</p></div>
+      <a class="cta-circle" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Start an order →</a>
+    </div>
+    <div class="foot-pills">
+      <a href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">instagram.com/bellas.sweettooth</a>
+      <a href="https://linktr.ee/bellas.sweetooth" target="_blank" rel="noopener">linktr.ee/bellas.sweetooth</a>
+    </div>
+    <div class="foot-bar">
+      <div><label>VERSION</label><p>2026 © Edition</p></div>
+      <div><label>LOCAL TIME</label><p id="laClock2">--:--</p></div>
+      <div><label>FOLLOWERS</label><p>9,446 on Instagram</p></div>
+      <div><label>HIGHLIGHTS</label><p>How to order · Availability</p></div>
+      <div><label>SOCIALS</label><p><a href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Instagram</a> · <a href="https://linktr.ee/bellas.sweetooth" target="_blank" rel="noopener">TikTok</a></p></div>
+    </div>
+    <canvas id="footName"></canvas>
+  </footer>
+</main>
+
+<!-- STORY OVERLAY -->
+<div class="story" id="story">
+  <button class="story-skip" id="storySkip">Skip to the site</button>
+  <div class="story-track">
+    <div class="chapter"><em>01</em><span>Chapter 1</span><h3>It starts with a DM.</h3><p>Check availability, read the policies, send your date.</p></div>
+    <div class="chapter"><em>02</em><span>Chapter 2</span><h3>Every cake is made to order.</h3><p>Nothing comes off a shelf in a home kitchen in 90044.</p></div>
+    <div class="chapter"><em>03</em><span>Chapter 3</span><h3>Bento is the signature.</h3><p>Two layers, round or heart — the cake the feed asks for most.</p></div>
+    <div class="chapter"><em>04</em><span>Chapter 4</span><h3>The feed is the menu.</h3><p>2,016 posts of cakes and treats, and counting.</p></div>
+    <div class="chapter"><em>05</em><span>Chapter 5</span><h3>Booking November.</h3><p>That's her story. <a href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Start an order →</a></p></div>
+  </div>
+  <p class="story-hint">SCROLL</p>
+</div>
+
+<!-- BOTTOM PILL -->
+<div class="pill" id="pill">
+  <button class="pill-code" id="codeBtn" title="Show the code">&lt;/&gt;</button>
+  <div class="pill-seg"><button class="active" id="segSite">Site</button><button id="segStory">Story</button></div>
+  <div class="pill-seg"><button class="active">EN</button></div>
+  <a class="pill-heart" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener" title="Instagram">♥</a>
+  <span class="pill-tip" id="pillTip">Show the code</span>
+</div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
