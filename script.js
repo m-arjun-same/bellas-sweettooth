@@ -62,7 +62,7 @@ $$('.reveal-h').forEach(function(el){ gsap.to(el,{clipPath:'inset(0 0 -12% 0)',d
 /* particle stat numbers */
 $$('.stat-num').forEach(function(cv){
   var text=cv.getAttribute('data-text');
-  ScrollTrigger.create({trigger:cv,start:'top 85%',once:true,onEnter:function(){
+  function drawStat(){ if(cv.dataset.done) return; cv.dataset.done='1'; (function(){
     var w=cv.clientWidth||260,h=cv.clientHeight||110; cv.width=w; cv.height=h;
     var off=document.createElement('canvas'); off.width=w; off.height=h; var og=off.getContext('2d');
     og.font='900 '+(w>200?96:64)+'px Inter,sans-serif'; og.fillStyle='#fff'; og.textBaseline='middle';
@@ -74,7 +74,10 @@ $$('.stat-num').forEach(function(cv){
       pts.forEach(function(pt){ var q=Math.max(0,Math.min(1,p*1.3-pt.t*.3)); var e=1-Math.pow(1-q,3); ctx.fillRect(pt.sx+(pt.x-pt.sx)*e,pt.sy+(pt.y-pt.sy)*e,2.4,2.4); });
       if(p<1) requestAnimationFrame(frame); }
     requestAnimationFrame(frame);
-  }});
+  })(); }
+  ScrollTrigger.create({trigger:cv,start:'top 85%',once:true,onEnter:drawStat});
+  var sio=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ drawStat(); sio.disconnect(); } }); },{threshold:.3});
+  sio.observe(cv);
 });
 
 /* work hover: dim siblings, preview + blue circle */
@@ -154,7 +157,7 @@ function closeMenu(){ overlay.classList.remove('open'); }
 $('#menuBtn').addEventListener('click',openMenu); fab.addEventListener('click',openMenu);
 var moClose=$('#moClose'); if(moClose) moClose.addEventListener('click',closeMenu);
 document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeMenu(); closeStory(); } });
-overlay.addEventListener('click',function(e){ if(e.target===overlay) closeMenu(); });
+overlay.addEventListener('click',function(e){ if(e.target===overlay||(e.target.closest&&e.target.closest('.mo-close'))) closeMenu(); });
 function drawMoName(){ var cv=$('#moName'); if(!cv||cv.width) { if(cv&&cv.width) return; }
   var w=cv.clientWidth||innerWidth; cv.width=w; cv.height=110; var g=cv.getContext('2d');
   g.font='900 64px Inter,sans-serif'; var txt='Bella\u2019s Sweet Tooth \u2022 Bella\u2019s Sweet Tooth \u2022 '; g.fillStyle='#fff';

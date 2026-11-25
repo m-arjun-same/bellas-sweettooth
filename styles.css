@@ -23,7 +23,9 @@ img{display:block;max-width:100%}
 @media(hover:none){.cursor,.cursor-circle{display:none}body,button{cursor:auto}}
 
 /* header */
-header{position:fixed;top:0;left:0;right:0;height:100px;display:flex;align-items:center;gap:34px;padding:0 3.4vw;z-index:120;transition:opacity .4s,transform .4s}
+header{position:fixed;top:0;left:0;right:0;height:100px;display:flex;align-items:center;gap:34px;padding:0 3.4vw;z-index:120;transition:opacity .4s,transform .4s;mix-blend-mode:difference;color:#fff}
+header .h-role{color:#bdbdb8}
+header .dot-green{background:var(--green)}
 header.hide{opacity:0;transform:translateY(-12px);pointer-events:none}
 .logo{font-weight:800;font-size:19px;letter-spacing:-.01em;white-space:nowrap}
 .logo i{color:var(--accent);font-style:normal}
