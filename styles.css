@@ -425,3 +425,27 @@ footer.light,footer{background:var(--cream2)}
 header{background:rgba(251,244,236,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .sec-label{z-index:3}
 .carousel-track{animation:none}
+
+/* ===== v6 — Build Your Cake (replaces year timeline) ===== */
+.builder{margin-top:70px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;background:#fff;border:1px solid #EFE0D2;border-radius:24px;padding:56px;box-shadow:0 24px 60px rgba(43,26,18,.08)}
+.cake-stage{text-align:center}
+.cake-topper{display:inline-block;background:var(--ink);color:#FBF4EC;font-size:14px;font-weight:700;letter-spacing:.06em;padding:8px 18px;border-radius:999px;margin-bottom:22px}
+.cake-stack{display:flex;flex-direction:column-reverse;align-items:center;gap:5px;min-height:190px;justify-content:flex-start}
+.cake-layer{border-radius:14px;height:56px;transition:all .45s cubic-bezier(.22,1,.36,1);box-shadow:inset 0 -10px 0 rgba(0,0,0,.10),inset 0 8px 0 rgba(255,255,255,.35)}
+.cake-layer.s51{width:210px}.cake-layer.s52{width:250px}.cake-layer.s53{width:170px}
+.cake-layer.st-bento{background:linear-gradient(180deg,#FFD3E4,#F79EC1)}
+.cake-layer.st-vintage{background:linear-gradient(180deg,#57182B,#38101D)}
+.cake-layer.st-custom:nth-child(1){background:linear-gradient(180deg,#FFC65C,#FF9E3D)}
+.cake-layer.st-custom:nth-child(2){background:linear-gradient(180deg,#7BD3A8,#3FBA7E)}
+.cake-layer.st-custom:nth-child(3){background:linear-gradient(180deg,#8FA8FF,#5C61E0)}
+.cake-plate{width:300px;max-width:90%;height:14px;background:#E8D9C8;border-radius:50%;margin:10px auto 0}
+.cake-summary{margin-top:26px;font-size:19px;font-weight:700}
+.cake-opts h4{font-size:13px;letter-spacing:.16em;color:var(--grey);margin:0 0 12px}
+.opt-group{margin-bottom:28px}
+.opt-row{display:flex;flex-wrap:wrap;gap:10px}
+.opt-row button{border:1px solid #E0CDBD;border-radius:999px;padding:11px 20px;font-size:15px;font-weight:600;color:var(--ink);transition:.25s}
+.opt-row button:hover{border-color:var(--accent)}
+.opt-row button.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.cake-cta{display:inline-block;margin-top:6px}
+.cake-note{margin-top:14px;color:var(--grey);font-size:14px}
+@media(max-width:768px){.builder{grid-template-columns:1fr;padding:32px 22px;gap:40px}.cake-plate{width:240px}}

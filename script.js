@@ -90,13 +90,22 @@ if(wl && matchMedia('(hover:hover)').matches){
   document.addEventListener('mousemove',function(e){ prev.style.left=(e.clientX-245)+'px'; prev.style.top=(e.clientY-145)+'px'; });
 }
 
-/* experience: pinned year follows timeline */
-var expItems=$$('.exp-item'), expYear=$('#expYear');
-expItems.forEach(function(it){
-  ScrollTrigger.create({trigger:it,start:'top 55%',end:'bottom 55%',
-    onToggle:function(self){ if(self.isActive){ expItems.forEach(function(x){x.classList.remove('on')}); it.classList.add('on');
-      var y=it.getAttribute('data-year'); if(expYear.textContent!==y){ gsap.fromTo(expYear,{y:26,opacity:0},{y:0,opacity:1,duration:.5,ease:'power3.out'}); expYear.textContent=y; } } }});
-});
+
+/* build your cake */
+(function(){ var stack=$('#cakeStack'); if(!stack) return;
+  var state={size:'6\u2033',layers:3,style:'Vintage heart',occasion:'Birthday'};
+  var styleClass={'Bento pink':'st-bento','Vintage heart':'st-vintage','Custom theme':'st-custom'};
+  var sizeClass={'5\u2033':'s51','6\u2033':'s52','Bento':'s53'};
+  function render(){ stack.innerHTML=''; for(var i=0;i<state.layers;i++){ var d=document.createElement('div');
+      d.className='cake-layer '+styleClass[state.style]+' '+sizeClass[state.size]; stack.appendChild(d); }
+    $('#cakeTopper').textContent=state.occasion;
+    $('#cakeSummary').textContent=state.size+' \u00B7 '+state.layers+' layers \u00B7 '+state.style+' \u00B7 '+state.occasion;
+    gsap.fromTo(stack.children,{y:16,opacity:0},{y:0,opacity:1,duration:.5,stagger:.07,ease:'power3.out'}); }
+  $$('.opt-row').forEach(function(row){ row.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b)return;
+    $$('button',row).forEach(function(x){x.classList.remove('active')}); b.classList.add('active');
+    var key=row.getAttribute('data-opt'); state[key]= key==='layers'? parseInt(b.getAttribute('data-val'),10) : b.getAttribute('data-val'); render(); }); });
+  render();
+})();
 
 /* motto: spotlight + break/fix */
 var motto=$('#motto'), spot=$('#mottoSpot'), mottoH=$('#mottoH');

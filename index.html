@@ -7,7 +7,7 @@
 <meta name="description" content="Custom cakes, bento cakes, vintage heart cakes and chocolate-covered treats, made to order in South Los Angeles, 90044.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 <a class="skip" href="#about">Skip to content</a>
@@ -49,7 +49,7 @@
     <a href="#about"><em>02</em>About me</a>
     <a href="#do"><em>03</em>What I do</a>
     <a href="#work"><em>04</em>Work</a>
-    <a href="#experience"><em>05</em>Experience</a>
+    <a href="#experience"><em>05</em>Build your cake</a>
     <a href="#contact"><em>06</em>Contact</a>
     <a href="#favourites" class="plain">House favourites</a>
   </nav>
@@ -159,19 +159,31 @@
   </section>
 
   <!-- 05 EXPERIENCE -->
-  <section class="sec" id="experience" data-rail="EXPERIENCE">
-    <span class="sec-label">(05) EXPERIENCE</span>
-    <p class="exp-intro reveal">Every cake on this page came out of one home kitchen in <b>South Los Angeles</b> — baked to order, never off a shelf.</p>
-    <a class="exp-link reveal" href="#work">See the best sellers ↓</a>
-    <div class="exp-pin" id="expPin">
-      <div class="exp-year" id="expYear">2026</div>
-      <div class="exp-list" id="expList">
-        <div class="exp-item" data-year="2026"><em>2026</em><h4>Booking November</h4><p>Spider-Man cake — the most-loved order · Los Angeles</p></div>
-        <div class="exp-item" data-year="2026"><em>2026</em><h4>Bento season</h4><p>2-layer &amp; heart bentos, every week · Los Angeles</p></div>
-        <div class="exp-item" data-year="2025"><em>2025</em><h4>Baby shower</h4><p>Mini cakes · Sep 2025</p></div>
-        <div class="exp-item" data-year="2025"><em>2025</em><h4>Churro cheesecake</h4><p>With 6ct berries · Jul 2025</p></div>
-        <div class="exp-item" data-year="2025"><em>2025</em><h4>Quinceañera</h4><p>Pink &amp; white cake · May 2025</p></div>
-        <div class="exp-item" data-year="2025"><em>2025</em><h4>Sweet 16</h4><p>Strawberry cake, macarons &amp; gold · Jan 2025</p></div>
+  <section class="sec" id="experience" data-rail="BUILD YOUR CAKE">
+    <span class="sec-label">(05) BUILD YOUR CAKE</span>
+    <p class="exp-intro reveal">Don't pick from a shelf — <b>build your cake</b>. Tap your size, layers, style and occasion, and watch it stack up.</p>
+    <div class="builder reveal" id="builder">
+      <div class="cake-stage">
+        <div class="cake-topper" id="cakeTopper">Birthday</div>
+        <div class="cake-stack" id="cakeStack"></div>
+        <div class="cake-plate"></div>
+        <p class="cake-summary" id="cakeSummary">6″ · 3 layers · Vintage heart · Birthday</p>
+      </div>
+      <div class="cake-opts">
+        <div class="opt-group"><h4>Size</h4><div class="opt-row" data-opt="size">
+          <button data-val="5″">5″</button><button data-val="6″" class="active">6″</button><button data-val="Bento">Bento</button>
+        </div></div>
+        <div class="opt-group"><h4>Layers</h4><div class="opt-row" data-opt="layers">
+          <button data-val="2">2 layers</button><button data-val="3" class="active">3 layers</button>
+        </div></div>
+        <div class="opt-group"><h4>Style</h4><div class="opt-row" data-opt="style">
+          <button data-val="Bento pink">Bento pink</button><button data-val="Vintage heart" class="active">Vintage heart</button><button data-val="Custom theme">Custom theme</button>
+        </div></div>
+        <div class="opt-group"><h4>Occasion</h4><div class="opt-row" data-opt="occasion">
+          <button data-val="Birthday" class="active">Birthday</button><button data-val="Baby shower">Baby shower</button><button data-val="Quinceañera">Quinceañera</button><button data-val="Just because">Just because</button>
+        </div></div>
+        <a class="btn-accent cake-cta" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Order this cake →</a>
+        <p class="cake-note">Built to order in South LA · replies within 24–48 hours</p>
       </div>
     </div>
     <p class="strip-title">On the menu</p>
@@ -306,6 +318,6 @@
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/ScrollTrigger.min.js"></script>
 <script src="vendor/lenis.min.js"></script>
-<script src="script.js?v=5"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>
