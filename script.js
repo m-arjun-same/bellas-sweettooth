@@ -221,8 +221,15 @@ document.addEventListener('mousemove',function(e){ if(!document.body.classList.c
 (function(){ var slides=$$('.hero-slide'); if(slides.length<2) return; var i=0;
   setInterval(function(){ slides[i].classList.remove('on'); i=(i+1)%slides.length; slides[i].classList.add('on'); },4200); })();
 
+/* about carousel — JS-driven infinite scroll */
+(function(){ var track=document.querySelector('.carousel-track'); if(!track) return; var x=0;
+  var half=track.scrollWidth/2;
+  (function step(){ x-=0.6; if(half&&-x>=half) x+=half; track.style.transform='translateX('+x+'px)'; requestAnimationFrame(step); })();
+  window.addEventListener('resize',function(){ half=track.scrollWidth/2; });
+})();
+
 /* GSAP parallax on section images */
-$$('.card-img,.fav-img,.carousel-track img').forEach(function(im){
+$$('.card-img,.fav-img').forEach(function(im){
   gsap.fromTo(im,{y:-14},{y:14,ease:'none',scrollTrigger:{trigger:im,start:'top bottom',end:'bottom top',scrub:true}});
 });
 

@@ -420,3 +420,8 @@ footer.light,footer{background:var(--cream2)}
 .carousel-track img{width:300px;height:300px;object-fit:cover;border-radius:14px;flex:none}
 @keyframes carouselScroll{to{transform:translateX(calc(-50% - 9px))}}
 @media(max-width:768px){.carousel-track img{width:210px;height:210px}.card-img{height:190px}.fav-img{height:200px}}
+
+/* ===== v5 fixes ===== */
+header{background:rgba(251,244,236,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.sec-label{z-index:3}
+.carousel-track{animation:none}
