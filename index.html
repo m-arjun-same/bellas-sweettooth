@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bella's Sweet Tooth | Home Based Baker, South Los Angeles</title>
-<meta name="description" content="Custom cakes, bento cakes, vintage heart cakes and chocolate-covered treats, made to order in South Los Angeles, 90044.">
+<title>The Velvet Crumb | Home Baker, Marigold Falls</title>
+<meta name="description" content="Custom cakes, choco drip bentos, velvet heart cakes and chocolate-covered treats, made to order in Marigold Falls.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress"></div>
 <a class="skip" href="#about">Skip to content</a>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-circle" id="cursorCircle">View post ↗</div>
@@ -28,9 +29,9 @@
 </aside>
 
 <header id="siteHeader">
-  <a class="logo" href="#top">Bella's Sweet Tooth <i>••</i></a>
-  <span class="h-role">Home Based Baker · South Los Angeles</span>
-  <a class="h-open" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener"><i class="dot-green"></i> Booking November</a>
+  <a class="logo" href="#top">The Velvet Crumb <i>••</i></a>
+  <span class="h-role">Home Baker · Marigold Falls</span>
+  <a class="h-open" href="https://www.instagram.com/velvetcrumb.bakes" target="_blank" rel="noopener"><i class="dot-green"></i> Booking December</a>
   <nav class="h-nav">
     <a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a>
   </nav>
@@ -39,7 +40,7 @@
 
 <div class="rail-left" id="railLeft"><i></i><span id="railLabel">HOME</span></div>
 <div class="rail-right" id="railRight"></div>
-<div class="awwwards" id="awwwardsBadge">B. — Bento of the Day</div>
+<div class="awwwards" id="awwwardsBadge">V. — Cake of the Day</div>
 <button class="fab-menu" id="fabMenu" aria-label="Menu">≡</button>
 
 <div class="menu-overlay" id="menuOverlay">
@@ -53,8 +54,8 @@
     <a href="#contact"><em>06</em>Contact</a>
     <a href="#favourites" class="plain">House favourites</a>
   </nav>
-  <img src="assets/vintageheart.jpg" alt="Vintage heart cake by Bella's Sweet Tooth">
-  <div class="mo-foot"><span>South Los Angeles · 90044</span><span>Instagram — @bellas.sweettooth</span><span>Booking November</span></div>
+  <img src="assets/velvetheart.jpg" alt="Velvet heart cake by The Velvet Crumb">
+  <div class="mo-foot"><span>Marigold Falls · 7 Honeysuckle Lane</span><span>Instagram — @velvetcrumb.bakes</span><span>Booking December</span></div>
   <canvas id="moName"></canvas>
 </div>
 
@@ -64,40 +65,42 @@
   <section class="hero" data-rail="HOME">
     <div class="hero-img-wrap">
       <canvas id="heroParticles"></canvas>
-      <img id="heroImg" class="hero-slide on" src="assets/vintageheart.jpg" alt="Black vintage heart cake with burgundy roses by Bella's Sweet Tooth">
-      <img class="hero-slide" src="assets/redcake.jpg" alt="Red petal cake by Bella's Sweet Tooth">
-      <img class="hero-slide" src="assets/spiderman.jpg" alt="Spider-Man cake by Bella's Sweet Tooth">
-      <img class="hero-slide" src="assets/birthday3layer.jpg" alt="Birthday cake by Bella's Sweet Tooth">
+      <img id="heroImg" class="hero-slide on" src="assets/velvetheart.jpg" alt="Black velvet heart cake with burgundy roses by The Velvet Crumb">
+      <img class="hero-slide" src="assets/rosepetal.jpg" alt="Rose petal cake by The Velvet Crumb">
+      <img class="hero-slide" src="assets/comet.jpg" alt="Captain Comet superhero cake by The Velvet Crumb">
+      <img class="hero-slide" src="assets/birthday3layer.jpg" alt="Birthday cake by The Velvet Crumb">
     </div>
     <div class="hero-copy">
-      <h1><span class="line"><span>Custom cakes, made</span></span><span class="line"><span>to order in South LA.</span></span></h1>
-      <p>Home based baker in South Los Angeles, 90044. Bento cakes, vintage heart cakes and chocolate-covered treats for any special occasion.</p>
+      <h1><span class="line"><span>Custom cakes, <span class="h1-chip"><img src="assets/rosepetal.jpg" alt=""></span> made</span></span><span class="line"><span>to order in Marigold Falls.</span></span></h1>
+      <p>Home baker June Marlowe, at the Crumb Cottage in Marigold Falls. Choco drip bentos, velvet heart cakes and chocolate-covered treats for any special occasion.</p>
       <div class="hero-ctas">
-        <a class="btn-accent" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Start an order</a>
+        <a class="btn-accent" href="https://www.instagram.com/velvetcrumb.bakes" target="_blank" rel="noopener">Start an order</a>
         <a class="btn-ghost" href="#work">See the cakes ↓</a>
       </div>
     </div>
     <div class="hero-globe">
       <canvas id="globe" width="190" height="190"></canvas>
-      <div><strong>Los Angeles <span id="laClock">--:--</span></strong><small>South Los Angeles · 90044</small></div>
+      <div><strong>Marigold Falls <span id="laClock">--:--</span></strong><small>Marigold Falls · 7 Honeysuckle Lane</small></div>
     </div>
     <div class="hero-arrow">↘</div>
   </section>
 
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marqueeTrack"><span>Velvet Heart Cake ✦ Choco Drip Bento ✦ Captain Comet ✦ Rainbow Sprinkle ✦ Mini Cupcakes ✦ Fairy Floss ✦ Blush Tier ✦ Moonlight Chocoflan ✦&nbsp;</span><span>Velvet Heart Cake ✦ Choco Drip Bento ✦ Captain Comet ✦ Rainbow Sprinkle ✦ Mini Cupcakes ✦ Fairy Floss ✦ Blush Tier ✦ Moonlight Chocoflan ✦&nbsp;</span></div></div>
+
   <!-- 01 ABOUT -->
   <section class="sec" id="about" data-rail="ABOUT ME">
     <span class="sec-label">(01) ABOUT ME</span>
-    <p class="about-lead reveal">Most of what I bake, you'll never pull off a shelf: the <b>bento cake</b> for two, the <b>vintage heart cake</b>, the <b>strawberries</b> dipped to order — every cake starts as a <b>DM</b>.</p>
-    <p class="about-sub reveal">I bake from home in South Los Angeles and reply to every message myself, within 24–48 hours. Before you DM, check the “how to order / policies” and “availability” highlights — they hold the open dates and the rules.</p>
+    <p class="about-lead reveal">Most of what I bake, you'll never pull off a shelf: the <b>choco drip bento</b> for two, the <b>velvet heart cake</b>, the <b>cupcakes</b> frosted to order — every cake starts as a <b>DM</b>.</p>
+    <p class="about-sub reveal">June bakes from home in Marigold Falls and replies to every message herself, within 24–48 hours. Before you DM, check the “how to order / policies” and “availability” highlights — they hold the open dates and the rules.</p>
     <div class="stats">
       <div class="stat"><canvas class="stat-num" data-text="5″–6″"></canvas><p><b>cake sizes</b> — custom, two or three layers</p></div>
       <div class="stat"><canvas class="stat-num" data-text="100%"></canvas><p><b>made to order</b> — nothing off a shelf</p></div>
       <div class="stat"><canvas class="stat-num" data-text="24–48"></canvas><p><b>hours</b> — reply time, every message</p></div>
-      <div class="stat"><canvas class="stat-num" data-text="90044"></canvas><p><b>South Los Angeles</b> — home bakery</p></div>
+      <div class="stat"><canvas class="stat-num" data-text="7"></canvas><p><b>Honeysuckle Lane</b> — the Crumb Cottage, Marigold Falls</p></div>
     </div>
     <div class="carousel reveal" aria-label="Cake gallery"><div class="carousel-track">
-<img src="assets/spiderman.jpg" alt="Spider-Man cake"><img src="assets/redcake.jpg" alt="Red petal cake"><img src="assets/bookcake.jpg" alt="Book cake"><img src="assets/weeknd.jpg" alt="Star cake"><img src="assets/bento2layer.jpg" alt="Bento cake"><img src="assets/vintageheart.jpg" alt="Vintage heart cake"><img src="assets/minicakes.jpg" alt="Mini cakes"><img src="assets/birthday3layer.jpg" alt="Birthday cake"><img src="assets/babyshower.jpg" alt="Baby shower cake"><img src="assets/fairy.jpg" alt="Fairy cake">
-<img src="assets/spiderman.jpg" alt=""><img src="assets/redcake.jpg" alt=""><img src="assets/bookcake.jpg" alt=""><img src="assets/weeknd.jpg" alt=""><img src="assets/bento2layer.jpg" alt=""><img src="assets/vintageheart.jpg" alt=""><img src="assets/minicakes.jpg" alt=""><img src="assets/birthday3layer.jpg" alt=""><img src="assets/babyshower.jpg" alt=""><img src="assets/fairy.jpg" alt="">
+<img src="assets/comet.jpg" alt="Captain Comet cake"><img src="assets/rosepetal.jpg" alt="Rose petal cake"><img src="assets/cocoadrip.jpg" alt="Cocoa drip cake"><img src="assets/rainbow.jpg" alt="Rainbow sprinkle cake"><img src="assets/chocodrip.jpg" alt="Choco drip bento"><img src="assets/velvetheart.jpg" alt="Velvet heart cake"><img src="assets/minicupcakes.jpg" alt="Mini cupcakes"><img src="assets/birthday3layer.jpg" alt="Birthday cake"><img src="assets/blushtier.jpg" alt="Blush tier cake"><img src="assets/fairyfloss.jpg" alt="Fairy floss cake">
+<img src="assets/comet.jpg" alt=""><img src="assets/rosepetal.jpg" alt=""><img src="assets/cocoadrip.jpg" alt=""><img src="assets/rainbow.jpg" alt=""><img src="assets/chocodrip.jpg" alt=""><img src="assets/velvetheart.jpg" alt=""><img src="assets/minicupcakes.jpg" alt=""><img src="assets/birthday3layer.jpg" alt=""><img src="assets/blushtier.jpg" alt=""><img src="assets/fairyfloss.jpg" alt="">
 </div></div>
   </section>
 
@@ -106,12 +109,12 @@
     <span class="sec-label">(02) WHAT I DO</span>
     <div class="do-head"><span class="do-grey">Usually for the same party</span><h2 class="reveal-h">From the first DM<br>to the last ribbon.</h2></div>
     <div class="cards">
-      <article class="card reveal"><em>01</em><img class="card-img" src="assets/bento2layer.jpg" alt="Bento cake"><h3>Bento cakes</h3><p>Two-layer bentos, round or heart, sized for small celebrations. The current signature.</p></article>
-      <article class="card reveal"><em>02</em><img class="card-img" src="assets/vintageheart.jpg" alt="Vintage heart cake"><h3>Vintage heart cakes</h3><p>Piped shells, draped icing, roses and ribbons. The most re-ordered design in the bakery.</p></article>
-      <article class="card reveal"><em>03</em><img class="card-img" src="assets/birthday3layer.jpg" alt="Custom birthday cake"><h3>Custom birthday cakes</h3><p>5″ and 6″ cakes, two or three layers, built around your theme — Spider-Man to star cakes.</p></article>
-      <article class="card reveal"><em>04</em><img class="card-img" src="assets/minicakes.jpg" alt="Mini cakes and treats"><h3>Chocolate-covered treats</h3><p>Strawberries, pretzels, cake pops and rice crispy treats, dipped and decorated to match.</p></article>
-      <article class="card reveal"><em>05</em><img class="card-img" src="assets/babyshower.jpg" alt="Party cake"><h3>Party packages</h3><p>A full sweet table for any special occasion, colour-matched to your party.</p></article>
-      <article class="card reveal"><em>06</em><img class="card-img" src="assets/fairy.jpg" alt="Seasonal cake"><h3>Seasonal treats</h3><p>Halloween, Thanksgiving, Christmas, Easter, Valentine's — the menu changes with the calendar.</p></article>
+      <article class="card reveal"><em>01</em><img class="card-img" src="assets/chocodrip.jpg" alt="Choco drip bento"><h3>Choco drip cakes</h3><p>Two-layer bentos, round or heart, with a slow chocolate drip. The current signature.</p></article>
+      <article class="card reveal"><em>02</em><img class="card-img" src="assets/velvetheart.jpg" alt="Velvet heart cake"><h3>Velvet heart cakes</h3><p>Piped shells, draped icing, roses and ribbons. The most re-ordered design in the bakery.</p></article>
+      <article class="card reveal"><em>03</em><img class="card-img" src="assets/birthday3layer.jpg" alt="Custom birthday cake"><h3>Custom birthday cakes</h3><p>5″ and 6″ cakes, two or three layers, built around your theme — Captain Comet to rainbow sprinkles.</p></article>
+      <article class="card reveal"><em>04</em><img class="card-img" src="assets/minicupcakes.jpg" alt="Mini cupcakes and treats"><h3>Mini cupcakes &amp; treats</h3><p>Swirl-frosted minis, strawberries, pretzels, cake pops and rice crispy treats, decorated to match.</p></article>
+      <article class="card reveal"><em>05</em><img class="card-img" src="assets/blushtier.jpg" alt="Celebration tier cake"><h3>Celebration tier cakes</h3><p>Three tiers of berries and cream for any special occasion, colour-matched to your party.</p></article>
+      <article class="card reveal"><em>06</em><img class="card-img" src="assets/fairyfloss.jpg" alt="Fairy floss cake"><h3>Fairy floss cakes</h3><p>Pink drip, strawberry cream and a wafer cone — the whimsical one, all year round.</p></article>
     </div>
     <p class="strip-title">From first check to party day</p>
     <div class="strip">
@@ -128,22 +131,22 @@
   <section class="sec" id="work" data-rail="WORK">
     <span class="sec-label">(03) BEST SELLERS</span>
     <h2 class="reveal-h">Best sellers</h2>
-    <p class="work-intro reveal">Real cakes from real celebrations — every one baked to order in South Los Angeles.</p>
+    <p class="work-intro reveal">Cakes from imaginary celebrations — every one baked to order in Marigold Falls.</p>
     <div class="work-list" id="workList">
-      <a class="work-row" href="#contact" data-img="assets/spiderman.jpg" data-domain="instagram.com">
-        <em>01</em><h3>Spider-Man Cake</h3><p>“Booking November!!” — the most-loved cake in the bakery, a red Spider-Man birthday cake.</p>
-        <span class="w-meta">Custom cake · Los Angeles<b>● Most loved</b></span><i>→</i></a>
-      <a class="work-row" href="#contact" data-img="assets/vintageheart.jpg" data-domain="instagram.com">
-        <em>02</em><h3>Vintage Heart Cake</h3><p>“Older, hotter, wiser” — black cake, burgundy roses, pearls and ribbons.</p>
+      <a class="work-row" href="#contact" data-img="assets/comet.jpg" data-domain="instagram.com">
+        <em>01</em><h3>Captain Comet Cake</h3><p>“Booking December!!” — the most-loved cake in the bakery, a red-and-blue superhero birthday cake.</p>
+        <span class="w-meta">Custom cake · Crumb Cottage<b>● Most loved</b></span><i>→</i></a>
+      <a class="work-row" href="#contact" data-img="assets/velvetheart.jpg" data-domain="instagram.com">
+        <em>02</em><h3>Velvet Heart Cake</h3><p>“Older, hotter, wiser” — black cake, burgundy roses, pearls and ribbons.</p>
         <span class="w-meta">Heart cake · Vintage<b>● Made to order</b></span><i>→</i></a>
-      <a class="work-row" href="#contact" data-img="assets/minicakes.jpg" data-domain="instagram.com">
-        <em>03</em><h3>Mini Cakes</h3><p>Small cakes, boxed and ready — a bakery favourite, baked every week.</p>
-        <span class="w-meta">Bento · Mini cakes<b>● Bestseller</b></span><i>→</i></a>
-      <a class="work-row" href="#contact" data-img="assets/weeknd.jpg" data-domain="instagram.com">
-        <em>04</em><h3>The Weeknd Star Cake</h3><p>A star cake for a birthday, straight from the November order book.</p>
-        <span class="w-meta">Custom cake · Star cake<b>● Made to order</b></span><i>→</i></a>
+      <a class="work-row" href="#contact" data-img="assets/minicupcakes.jpg" data-domain="instagram.com">
+        <em>03</em><h3>Mini Cupcakes</h3><p>Swirl-frosted minis, boxed and ready — a bakery favourite, baked every week.</p>
+        <span class="w-meta">Bento · Mini cupcakes<b>● Bestseller</b></span><i>→</i></a>
+      <a class="work-row" href="#contact" data-img="assets/rainbow.jpg" data-domain="instagram.com">
+        <em>04</em><h3>Rainbow Sprinkle Cake</h3><p>A rainbow sprinkle cake for a birthday, straight from the December order book.</p>
+        <span class="w-meta">Custom cake · Rainbow sprinkle<b>● Made to order</b></span><i>→</i></a>
     </div>
-    <p class="work-foot reveal">Also on the menu: book cakes, chocoflan, churro cheesecake, fairy bentos and red petal cakes.</p>
+    <p class="work-foot reveal">Also on the menu: cocoa drip cakes, moonlight chocoflan, churro cheesecake, fairy floss bentos and rose petal cakes.</p>
     <img class="work-preview" id="workPreview" alt="">
   </section>
 
@@ -152,9 +155,9 @@
     <span class="sec-label">(04) HOUSE FAVOURITES</span>
     <h2 class="reveal-h">Favourites of my own</h2>
     <div class="fav-grid">
-      <article class="fav reveal"><em>01</em><img class="fav-img" src="assets/fairy.jpg" alt="Specialty cake by Bella's Sweet Tooth"><h3>Chocoflan</h3><p>Vanilla cake with chocolate flan and a strawberry drizzle.</p><p class="built">Vanilla <i>•</i> Chocolate flan <i>•</i> Strawberry</p><div class="fav-meta"><span>Specialty cake</span><span class="status on">● Bestseller</span></div></article>
-      <article class="fav reveal"><em>02</em><img class="fav-img" src="assets/babyshower.jpg" alt="Celebration cake by Bella's Sweet Tooth"><h3>Churro Cheesecake</h3><p>The cheesecake customers ask for, served with six chocolate-covered berries.</p><p class="built">Churro <i>•</i> Cheesecake <i>•</i> Berries, 6ct</p><div class="fav-meta"><span>Specialty</span><span class="status on">● Bestseller</span></div></article>
-      <article class="fav reveal"><em>03</em><img class="fav-img" src="assets/bento2layer.jpg" alt="Bento cake by Bella's Sweet Tooth"><h3>Bento Cakes</h3><p>Two layers, round or heart — the cake customers ask for most.</p><p class="built">2 layer <i>•</i> Heart or round <i>•</i> Made to order</p><div class="fav-meta"><span>Signature</span><span class="status dev">● Made to order</span></div></article>
+      <article class="fav reveal"><em>01</em><img class="fav-img" src="assets/fairyfloss.jpg" alt="Fairy floss cake by The Velvet Crumb"><h3>Fairy Floss Cake</h3><p>Pink drip, strawberry cream and a wafer cone — the whimsical favourite.</p><p class="built">Pink drip <i>•</i> Strawberry <i>•</i> Wafer cone</p><div class="fav-meta"><span>Specialty cake</span><span class="status on">● Bestseller</span></div></article>
+      <article class="fav reveal"><em>02</em><img class="fav-img" src="assets/blushtier.jpg" alt="Blush tier cake by The Velvet Crumb"><h3>Blush Tier Cake</h3><p>Three tiers of berries and cream — the celebration cake customers ask for most.</p><p class="built">3 tiers <i>•</i> Berries <i>•</i> Cream</p><div class="fav-meta"><span>Specialty</span><span class="status on">● Bestseller</span></div></article>
+      <article class="fav reveal"><em>03</em><img class="fav-img" src="assets/chocodrip.jpg" alt="Choco drip bento by The Velvet Crumb"><h3>Choco Drip Bento</h3><p>Two layers, round or heart — the cake customers ask for most.</p><p class="built">2 layer <i>•</i> Heart or round <i>•</i> Made to order</p><div class="fav-meta"><span>Signature</span><span class="status dev">● Made to order</span></div></article>
     </div>
   </section>
 
@@ -167,7 +170,7 @@
         <div class="cake-topper" id="cakeTopper">Birthday</div>
         <div class="cake-stack" id="cakeStack"></div>
         <div class="cake-plate"></div>
-        <p class="cake-summary" id="cakeSummary">6″ · 3 layers · Vintage heart · Birthday</p>
+        <p class="cake-summary" id="cakeSummary">6″ · 3 layers · Velvet heart · Birthday</p>
       </div>
       <div class="cake-opts">
         <div class="opt-group"><h4>Size</h4><div class="opt-row" data-opt="size">
@@ -177,18 +180,18 @@
           <button data-val="2">2 layers</button><button data-val="3" class="active">3 layers</button>
         </div></div>
         <div class="opt-group"><h4>Style</h4><div class="opt-row" data-opt="style">
-          <button data-val="Bento pink">Bento pink</button><button data-val="Vintage heart" class="active">Vintage heart</button><button data-val="Custom theme">Custom theme</button>
+          <button data-val="Rose petal">Rose petal</button><button data-val="Velvet heart" class="active">Velvet heart</button><button data-val="Custom theme">Custom theme</button>
         </div></div>
         <div class="opt-group"><h4>Occasion</h4><div class="opt-row" data-opt="occasion">
           <button data-val="Birthday" class="active">Birthday</button><button data-val="Baby shower">Baby shower</button><button data-val="Quinceañera">Quinceañera</button><button data-val="Just because">Just because</button>
         </div></div>
-        <a class="btn-accent cake-cta" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Order this cake →</a>
-        <p class="cake-note">Built to order in South LA · replies within 24–48 hours</p>
+        <a class="btn-accent cake-cta" href="https://www.instagram.com/velvetcrumb.bakes" target="_blank" rel="noopener">Order this cake →</a>
+        <p class="cake-note">Built to order in Marigold Falls · June replies within 24–48 hours</p>
       </div>
     </div>
     <p class="strip-title">On the menu</p>
     <div class="chips">
-      <span>Bento cakes</span><span>Heart cakes</span><span>Vintage cakes</span><span>Mini cakes</span><span>Chocoflan</span><span>Churro cheesecake</span><span>Chocolate-covered strawberries</span><span>Cake pops</span><span>Pretzels</span><span>Rice crispy treats</span><span>Cookies</span><span>Macarons</span><span>Party packages</span>
+      <span>Choco drip bentos</span><span>Velvet heart cakes</span><span>Rose petal cakes</span><span>Mini cupcakes</span><span>Moonlight chocoflan</span><span>Churro cheesecake</span><span>Chocolate-covered strawberries</span><span>Cake pops</span><span>Pretzels</span><span>Rice crispy treats</span><span>Cookies</span><span>Macarons</span><span>Party packages</span>
     </div>
   </section>
 
@@ -196,7 +199,7 @@
   <section class="motto" id="motto" data-rail="MOTTO">
     <span class="sec-label-center">MY MOTTO</span>
     <h2 id="mottoH"><span class="m-line">Every cake</span><span class="m-line">is <b>made to order.</b></span></h2>
-    <div class="motto-spot" id="mottoSpot"><span>DM first.<br>I reply in 24–48 hrs.</span></div>
+    <div class="motto-spot" id="mottoSpot"><span>DM first.<br>June replies in 24–48 hrs.</span></div>
     <p class="motto-hint">Hover to read the honest version</p>
     <div class="motto-btns">
       <button class="btn-outline" id="breakBtn">Break it</button>
@@ -228,7 +231,7 @@
         <p class="testi-full" id="testiFull"></p>
         <p class="testi-who"><b id="testiName"></b> <span id="testiRole"></span></p>
         <div class="testi-progress"><i id="testiBar"></i></div>
-        <p class="testi-note">In their own words — real customers, real parties.</p>
+        <p class="testi-note">In their own words — imaginary customers, imaginary parties.</p>
       </div>
     </div>
   </section>
@@ -240,16 +243,16 @@
     <div class="season-grid">
       <div class="season-col reveal">
         <h4>ON THE CALENDAR</h4>
-        <div class="season-row"><b>Christmas</b><span>First Christmas post of the year · Nov 2025</span></div>
+        <div class="season-row"><b>Christmas</b><span>First Christmas post of the year · Dec 2025</span></div>
         <div class="season-row"><b>Thanksgiving</b><span>Turkey cake pops, pretzels &amp; berries</span></div>
         <div class="season-row"><b>Halloween</b><span>Strawberry ghost cake pops</span></div>
         <div class="season-row"><b>Valentine's</b><span>Chocolate-covered strawberries</span></div>
       </div>
       <div class="season-col reveal">
         <h4>MOST LOVED</h4>
-        <div class="season-row"><b>Spider-Man cake</b><span>Most loved — Booking November</span></div>
+        <div class="season-row"><b>Captain Comet cake</b><span>Most loved — Booking December</span></div>
         <div class="season-row"><b>6″ 3-layer birthday</b><span>The smiling cake — a birthday favourite</span></div>
-        <div class="season-row"><b>The Weeknd star cake</b><span>Most ordered — November</span></div>
+        <div class="season-row"><b>Rainbow sprinkle cake</b><span>Most ordered — December</span></div>
       </div>
     </div>
   </section>
@@ -257,16 +260,16 @@
   <!-- 08 CONTACT -->
   <section class="sec light" id="contact" data-rail="CONTACT">
     <span class="sec-label">(08) CONTACT</span>
-    <span class="contact-where">South Los Angeles, PST (UTC−8)</span>
+    <span class="contact-where">Marigold Falls · The Crumb Cottage</span>
     <div class="contact-grid">
       <div>
         <h2 class="reveal-h dark-h">Ask me anything.</h2>
-        <p class="contact-body">An assistant briefed on how I bake answers straight away — and every answer points you to the real thing: <a href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">DM me on Instagram</a> and I'll reply within 24 hours.</p>
+        <p class="contact-body">June answers every DM herself — ask the assistant anything about sizes, treats &amp; booking, and it will point you to the real thing: <a href="https://www.instagram.com/velvetcrumb.bakes" target="_blank" rel="noopener">DM June on Instagram</a>, and she'll reply within 24 hours.</p>
         <span class="built-pill">● Answers about sizes, treats &amp; booking</span>
       </div>
       <div class="chat-card">
         <div class="chat-log" id="chatLog">
-          <div class="msg ai"><img src="assets/vintageheart.jpg" alt=""><p>Hi! Ask me about ordering, sizes, or what's booking now.</p></div>
+          <div class="msg ai"><img src="assets/velvetheart.jpg" alt=""><p>Hi! I'm June's assistant — ask me about ordering, sizes, or what's booking now.</p></div>
         </div>
         <div class="chat-chips" id="chatChips">
           <button>How do I order?</button>
@@ -285,23 +288,23 @@
   <!-- FOOTER -->
   <footer class="light" data-rail="FOOTER">
     <p class="foot-open">Taking on new orders now</p>
-    <h2 class="foot-h">Bella's Sweet Tooth <img src="assets/redcake.jpg" alt="Red petal cake"> — What's the occasion?</h2>
+    <h2 class="foot-h">The Velvet Crumb <img src="assets/rosepetal.jpg" alt="Rose petal cake"> — What's the occasion?</h2>
     <div class="foot-steps">
       <div><em>01</em><h4>Check availability</h4><p>Message for open dates</p></div>
       <div><em>02</em><h4>Send your date &amp; idea</h4><p>Replies in 24–48 hours</p></div>
       <div><em>03</em><h4>I reply within 24–48 hours</h4><p>From me, not an auto-reply</p></div>
-      <a class="cta-circle" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Start an order →</a>
+      <a class="cta-circle" href="https://www.instagram.com/velvetcrumb.bakes" target="_blank" rel="noopener">Start an order →</a>
     </div>
     <div class="foot-pills">
-      <a href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">instagram.com/bellas.sweettooth</a>
-      <a href="https://linktr.ee/bellas.sweetooth" target="_blank" rel="noopener">linktr.ee/bellas.sweetooth</a>
+      <a href="https://www.instagram.com/velvetcrumb.bakes" target="_blank" rel="noopener">instagram.com/velvetcrumb.bakes</a>
+      <a href="https://linktr.ee/velvetcrumb.bakes" target="_blank" rel="noopener">linktr.ee/velvetcrumb.bakes</a>
     </div>
     <div class="foot-bar">
       <div><label>VERSION</label><p>2026 © Edition</p></div>
       <div><label>LOCAL TIME</label><p id="laClock2">--:--</p></div>
-      <div><label>CAKE LOVERS</label><p>9,446 and counting</p></div>
+      <div><label>CAKE LOVERS</label><p>4,218 and counting</p></div>
       <div><label>HIGHLIGHTS</label><p>How to order · Availability</p></div>
-      <div><label>SOCIALS</label><p><a href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener">Instagram</a> · <a href="https://linktr.ee/bellas.sweetooth" target="_blank" rel="noopener">TikTok</a></p></div>
+      <div><label>SOCIALS</label><p><a href="https://www.instagram.com/velvetcrumb.bakes" target="_blank" rel="noopener">Instagram</a> · <a href="https://linktr.ee/velvetcrumb.bakes" target="_blank" rel="noopener">TikTok</a></p></div>
     </div>
     <canvas id="footName"></canvas>
   </footer>
@@ -311,13 +314,13 @@
 <div class="pill" id="pill">
   <button class="pill-code" id="codeBtn" title="Show the code">&lt;/&gt;</button>
   <a class="pill-order" href="#contact">Order a cake</a>
-  <a class="pill-heart" href="https://www.instagram.com/bellas.sweettooth" target="_blank" rel="noopener" title="Instagram">♥</a>
+  <a class="pill-heart" href="https://www.instagram.com/velvetcrumb.bakes" target="_blank" rel="noopener" title="Instagram">♥</a>
   <span class="pill-tip" id="pillTip">Show the code</span>
 </div>
 
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/ScrollTrigger.min.js"></script>
 <script src="vendor/lenis.min.js"></script>
-<script src="script.js?v=6"></script>
+<script src="script.js?v=7"></script>
 </body>
 </html>

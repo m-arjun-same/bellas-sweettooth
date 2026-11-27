@@ -1,4 +1,4 @@
-// Bella's Sweet Tooth — own code. Reference system: Inacio Nakiti site mode.
+// The Velvet Crumb — own code. Reference system: Inacio Nakiti site mode.
 (function(){
 'use strict';
 var $=function(s,c){return (c||document).querySelector(s)};
@@ -15,9 +15,9 @@ if(window.Lenis){ lenis=new Lenis({lerp:.09,smoothWheel:true});
 function scrollToEl(el){ if(lenis) lenis.scrollTo(el,{offset:-112}); else el.scrollIntoView({behavior:'smooth'}); }
 $$('a[href^="#"]').forEach(function(a){ a.addEventListener('click',function(e){ var id=a.getAttribute('href'); if(id.length>1){ var el=$(id); if(el){ e.preventDefault(); closeMenu(); scrollToEl(el); } } }); });
 
-/* clocks — Los Angeles */
-function tickClock(){ try{ var f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',hour:'numeric',minute:'2-digit'});
-  var t=f.format(new Date()); var c1=$('#laClock'),c2=$('#laClock2'); if(c1)c1.textContent=t; if(c2)c2.textContent=t+' PST'; }catch(e){} }
+/* clocks — Marigold Falls (local time) */
+function tickClock(){ try{ var f=new Intl.DateTimeFormat('en-US',{hour:'numeric',minute:'2-digit'});
+  var t=f.format(new Date()); var c1=$('#laClock'),c2=$('#laClock2'); if(c1)c1.textContent=t; if(c2)c2.textContent=t; }catch(e){} }
 tickClock(); setInterval(tickClock,20000);
 
 /* header + pill fade while scrolling, fab appears */
@@ -93,8 +93,8 @@ if(wl && matchMedia('(hover:hover)').matches){
 
 /* build your cake */
 (function(){ var stack=$('#cakeStack'); if(!stack) return;
-  var state={size:'6\u2033',layers:3,style:'Vintage heart',occasion:'Birthday'};
-  var styleClass={'Bento pink':'st-bento','Vintage heart':'st-vintage','Custom theme':'st-custom'};
+  var state={size:'6\u2033',layers:3,style:'Velvet heart',occasion:'Birthday'};
+  var styleClass={'Rose petal':'st-bento','Velvet heart':'st-vintage','Custom theme':'st-custom'};
   var sizeClass={'5\u2033':'s51','6\u2033':'s52','Bento':'s53'};
   function render(){ stack.innerHTML=''; for(var i=0;i<state.layers;i++){ var d=document.createElement('div');
       d.className='cake-layer '+styleClass[state.style]+' '+sizeClass[state.size]; stack.appendChild(d); }
@@ -130,9 +130,9 @@ breakBtn.addEventListener('click',function(){
 
 /* testimonials */
 var TESTI=[
- {ex:'“beautiful and delicious heart shape bday cake”',full:'“beautiful and delicious heart shape bday cake 🫒🍸✨” — posted with her vintage martini heart cake, baked by Bella\u2019s Sweet Tooth.',name:'Tabia Ceja Lopez',role:'Customer — heart cake post'},
- {ex:'“thank you again for this beauty”',full:'“she was HEAVYY ! thank you again for this beauty 😍” — on the biggest book cake she has made so far.',name:'Bryan Ortega Amaro',role:'Customer — book cake post'},
- {ex:'“Stop! This is wayyy too cute”',full:'“Stop! This is wayyy too cute” — on the 6\u2033 3-layer birthday cake with the party hat.',name:'D Sweets',role:'Comment — 6\u2033 3-layer cake post'}
+ {ex:'\u201cbeautiful and delicious heart shape bday cake\u201d',full:'\u201cbeautiful and delicious heart shape bday cake\u201d \u2014 on her velvet heart cake, baked by The Velvet Crumb.',name:'Poppy Lane',role:'Customer \u2014 velvet heart cake'},
+ {ex:'\u201cthank you again for this beauty\u201d',full:'\u201cshe was HEAVYY ! thank you again for this beauty\u201d \u2014 on the biggest cocoa drip cake June has made so far.',name:'Theo Ash',role:'Customer \u2014 cocoa drip cake'},
+ {ex:'\u201cStop! This is wayyy too cute\u201d',full:'\u201cStop! This is wayyy too cute\u201d \u2014 on the 6\u2033 3-layer birthday cake with the party hat.',name:'Lena Bloom',role:'Comment \u2014 6\u2033 3-layer cake'}
 ];
 var tIdx=0,tTimer=null,tStart=null;
 function showTesti(i){ tIdx=i; var t=TESTI[i];
@@ -169,7 +169,7 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeMenu
 overlay.addEventListener('click',function(e){ if(e.target===overlay||(e.target.closest&&e.target.closest('.mo-close'))) closeMenu(); });
 function drawMoName(){ var cv=$('#moName'); if(!cv||cv.width) { if(cv&&cv.width) return; }
   var w=cv.clientWidth||innerWidth; cv.width=w; cv.height=110; var g=cv.getContext('2d');
-  g.font='900 64px Inter,sans-serif'; var txt='Bella\u2019s Sweet Tooth \u2022 Bella\u2019s Sweet Tooth \u2022 '; g.fillStyle='#fff';
+  g.font='900 64px Inter,sans-serif'; var txt='The Velvet Crumb \u2022 The Velvet Crumb \u2022 '; g.fillStyle='#fff';
   var data=null; var off=document.createElement('canvas'); off.width=w; off.height=110; var og=off.getContext('2d');
   og.font='900 64px Inter,sans-serif'; og.fillStyle='#fff'; og.fillText(txt,10,74);
   try{ data=og.getImageData(0,0,w,110).data; }catch(e){ return; }
@@ -179,7 +179,7 @@ function drawMoName(){ var cv=$('#moName'); if(!cv||cv.width) { if(cv&&cv.width)
 (function(){ var cv=$('#footName'); if(!cv) return;
   function draw(){ var w=cv.clientWidth; if(!w) return; cv.width=w; cv.height=150;
     var off=document.createElement('canvas'); off.width=w; off.height=150; var og=off.getContext('2d');
-    og.font='900 92px Inter,sans-serif'; og.fillStyle='#141412'; og.fillText('Bella\u2019s Sweet Tooth \u2022 Bella\u2019s Sweet Tooth',0,104);
+    og.font='900 92px Inter,sans-serif'; og.fillStyle='#141412'; og.fillText('The Velvet Crumb \u2022 The Velvet Crumb',0,104);
     var data; try{ data=og.getImageData(0,0,w,150).data; }catch(e){ return; }
     var g=cv.getContext('2d'); g.fillStyle='#141412';
     for(var y=0;y<150;y+=5) for(var x=0;x<w;x+=5){ if(data[(y*w+x)*4+3]>110){ g.globalAlpha=.8; g.fillRect(x,y,2.6,2.6); } } }
@@ -188,22 +188,22 @@ function drawMoName(){ var cv=$('#moName'); if(!cv||cv.width) { if(cv&&cv.width)
 
 /* chat */
 var ANSWERS=[
- {k:['order','dm','buy','book'],a:'DM her on Instagram — but first check the “availability” highlight for open dates and read “how to order / policies”. She replies within 24–48 hours.'},
- {k:['size','big','layer','inch'],a:'From the feed: 5\u2033 and 6\u2033 cakes, two or three layers — plus bento and mini cakes for smaller celebrations.'},
- {k:['reply','fast','long','respond','answer'],a:'She replies to every DM herself within 24–48 hours.'},
- {k:['booking','now','november','date','available'],a:'She is booking November right now — the Spider-Man cake post says so. Check the “availability” highlight for the exact open dates.'},
- {k:['price','cost','much'],a:'Prices are quoted by her in DM — nothing is priced publicly, so send your date and design idea and she will quote you.'},
- {k:['where','location','la','pick'],a:'She is a home based baker in South Los Angeles, 90044.'},
- {k:['treat','strawberr','pretzel','pop'],a:'Yes — chocolate-covered strawberries, pretzels, cake pops and rice crispy treats, plus full party packages for any special occasion.'}
+ {k:['order','dm','buy','book'],a:'DM June on Instagram — but first check the \u201cavailability\u201d highlight for open dates and read \u201chow to order / policies\u201d. June replies within 24\u201348 hours.'},
+ {k:['size','big','layer','inch'],a:'From the menu: 5\u2033 and 6\u2033 cakes, two or three layers \u2014 plus choco drip bentos and mini cupcakes for smaller celebrations.'},
+ {k:['reply','fast','long','respond','answer'],a:'June replies to every DM herself within 24\u201348 hours.'},
+ {k:['booking','now','december','date','available'],a:'June is booking December right now \u2014 the Captain Comet cake post says so. Check the \u201cavailability\u201d highlight for the exact open dates.'},
+ {k:['price','cost','much'],a:'Prices are quoted by June in DM \u2014 nothing is priced publicly, so send your date and design idea and she will quote you.'},
+ {k:['where','location','pick'],a:'June is a home baker in Marigold Falls, at the Crumb Cottage, 7 Honeysuckle Lane.'},
+ {k:['treat','strawberr','pretzel','pop'],a:'Yes \u2014 chocolate-covered strawberries, pretzels, cake pops and rice crispy treats, plus full party packages for any special occasion.'}
 ];
 var log=$('#chatLog');
 function addMsg(txt,me){ var d=document.createElement('div'); d.className='msg'+(me?' me':'');
-  if(!me){ var im=document.createElement('img'); im.src='assets/vintageheart.jpg'; im.alt=''; d.appendChild(im); }
+  if(!me){ var im=document.createElement('img'); im.src='assets/velvetheart.jpg'; im.alt=''; d.appendChild(im); }
   var p=document.createElement('p'); p.textContent=txt; d.appendChild(p); log.appendChild(d); return d; }
 function answer(q){ var typing=addMsg('•••',false); typing.classList.add('typing');
   setTimeout(function(){ typing.remove(); var low=q.toLowerCase(),found=null;
     ANSWERS.forEach(function(x){ if(!found) x.k.forEach(function(k){ if(low.indexOf(k)>-1) found=x.a; }); });
-    addMsg(found||'I only know what\u2019s on her page — for anything else, DM @bellas.sweettooth on Instagram and she\u2019ll reply within 24–48 hours.',false);
+    addMsg(found||'I only know what\u2019s on June\u2019s page — for anything else, DM @velvetcrumb.bakes on Instagram and she\u2019ll reply within 24–48 hours.',false);
   },900); }
 $('#chatForm').addEventListener('submit',function(e){ e.preventDefault(); var v=$('#chatText').value.trim(); if(!v)return; $('#chatText').value=''; addMsg(v,true); answer(v); });
 $$('#chatChips button').forEach(function(b){ b.addEventListener('click',function(){ addMsg(b.textContent,true); answer(b.textContent); }); });
@@ -217,7 +217,7 @@ function toggleCode(){ document.body.classList.toggle('code-on'); $('#codeBtn').
     try{ var nav=performance.getEntriesByType('navigation')[0]; $('#mPaint').textContent=(nav.domContentLoadedEventEnd/1000).toFixed(2)+'s'; }catch(e){}
     var kb=0; try{ performance.getEntriesByType('resource').forEach(function(r){kb+=(r.transferSize||0)}); }catch(e){}
     $('#mWeight').textContent=kb?Math.round(kb/1024)+' KB':'—';
-    $('#cpCode').textContent='<section class="hero">\n  <canvas id="heroParticles"></canvas>\n  <h1>Custom cakes, made\n      to order in South LA.</h1>\n</section>\n\n.hero{ background:#0E0E0F }\n.hero h1{ font-weight:300;\n  font-size:56px; line-height:1.05 }'; } }
+    $('#cpCode').textContent='<section class="hero">\n  <canvas id="heroParticles"></canvas>\n  <h1>Custom cakes, made\n      to order in Marigold Falls.</h1>\n</section>\n\n.hero{ background:#0E0E0F }\n.hero h1{ font-weight:300;\n  font-size:56px; line-height:1.05 }'; } }
 codeBtns.forEach(function(b){ if(b) b.addEventListener('click',toggleCode); });
 document.addEventListener('mousemove',function(e){ if(!document.body.classList.contains('code-on'))return;
   var t=e.target, ins=$('#inspector'); if(!t||!t.tagName){ins.style.opacity='0';return;}
@@ -244,8 +244,8 @@ $$('.card-img,.fav-img').forEach(function(im){
 
 /* Build Your Cake — interactive builder (section 05) */
 (function(){ var stack=$('#cakeStack'); if(!stack) return;
-  var state={size:'6″',layers:'3',style:'Vintage heart',occasion:'Birthday'};
-  var styleClass={'Bento pink':'st-bento','Vintage heart':'st-vintage','Custom theme':'st-custom'};
+  var state={size:'6″',layers:'3',style:'Velvet heart',occasion:'Birthday'};
+  var styleClass={'Rose petal':'st-bento','Velvet heart':'st-vintage','Custom theme':'st-custom'};
   var baseW={'5″':205,'6″':250,'Bento':165};
   function render(anim){ stack.innerHTML=''; var n=parseInt(state.layers,10), w=baseW[state.size]||230;
     for(var i=0;i<n;i++){ var d=document.createElement('div'); d.className='cake-layer '+styleClass[state.style];
@@ -260,6 +260,43 @@ $$('.card-img,.fav-img').forEach(function(im){
       state[key]=b.getAttribute('data-val'); render(true); }); });
   });
   render(false);
+})();
+
+
+/* --- motion upgrade: scroll scrub, word-wipe headings, clip reveals (own code) --- */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  /* scroll progress */
+  var prog=document.getElementById('scrollProgress');
+  if(prog) gsap.to(prog,{scaleX:1,ease:'none',scrollTrigger:{trigger:document.body,start:'top top',end:'bottom bottom',scrub:.3}});
+  /* hero scrub (scroll-1 idea): photo drifts + settles as you scroll away, copy lifts out */
+  gsap.to('.hero-img-wrap',{yPercent:14,scale:.94,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hero-copy',{y:-70,opacity:.15,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'70% top',scrub:true}});
+  gsap.to('.hero-globe',{y:-40,opacity:0,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'60% top',scrub:true}});
+  /* headline word wipe (text idea): words sharpen in as the heading scrolls through */
+  $$('.reveal-h').forEach(function(h){
+    var parts=h.innerHTML.split(/<br\s*\/?>/i);
+    h.innerHTML=parts.map(function(p){ return p.split(/\s+/).filter(Boolean).map(function(w){ return '<span class="w-wipe">'+w+'</span>'; }).join(' '); }).join('<br>');
+    gsap.fromTo($$('.w-wipe',h),{opacity:.12},{opacity:1,stagger:.06,ease:'none',
+      scrollTrigger:{trigger:h,start:'top 88%',end:'top 42%',scrub:true}});
+  });
+  /* photo clip reveal + drift (scroll-5 idea): cards/favs wipe open, then drift at different speeds */
+  $$('.card-img,.fav-img').forEach(function(im,i){
+    gsap.fromTo(im,{clipPath:'inset(16% 10% 16% 10%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'none',
+      scrollTrigger:{trigger:im,start:'top 92%',end:'top 45%',scrub:true}});
+    gsap.to(im,{rotate:(i%2?1.2:-1.2),ease:'none',scrollTrigger:{trigger:im,start:'top bottom',end:'bottom top',scrub:true}});
+  });
+  /* best-seller rows slide in, staggered */
+  $$('.work-row').forEach(function(row,i){
+    gsap.fromTo(row,{x:-36,opacity:0},{x:0,opacity:1,duration:.8,delay:i*.06,ease:'power3.out',
+      scrollTrigger:{trigger:row,start:'top 92%'}});
+  });
+  /* marquee skews with scroll velocity */
+  var mq=document.getElementById('marqueeTrack');
+  if(mq && lenis){
+    var skewTo=gsap.quickTo(mq,'skewX',{duration:.4,ease:'power3.out'});
+    lenis.on('scroll',function(e){ skewTo(gsap.utils.clamp(-6,6,e.velocity*-.12)); });
+  }
 })();
 
 /* loader failsafe: nothing blocks first paint; refresh triggers after full load */

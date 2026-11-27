@@ -449,3 +449,23 @@ header{background:rgba(251,244,236,.86);backdrop-filter:blur(14px);-webkit-backd
 .cake-cta{display:inline-block;margin-top:6px}
 .cake-note{margin-top:14px;color:var(--grey);font-size:14px}
 @media(max-width:768px){.builder{grid-template-columns:1fr;padding:32px 22px;gap:40px}.cake-plate{width:240px}}
+
+/* --- Velvet Crumb motion upgrade (own code; library ideas: hero-1 split-word hero, scroll-1 scrub, scroll-5 drifting photos) --- */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:300}
+.h1-chip{display:inline-block;width:1.7em;height:.82em;border-radius:999px;overflow:hidden;vertical-align:-.08em}
+.h1-chip img{width:100%;height:100%;object-fit:cover;filter:none}
+.marquee{overflow:hidden;background:#141412;border-top:1px solid #2c2c2c;border-bottom:1px solid #2c2c2c;padding:16px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;will-change:transform;animation:marquee 26s linear infinite;font-size:15px;font-weight:600;letter-spacing:.06em;color:#9A9A97}
+.marquee-track span{padding-right:12px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.menu-overlay>img{transform:scale(1.12);opacity:0;transition:transform .9s cubic-bezier(.22,1,.36,1),opacity .7s}
+.menu-overlay.open>img{transform:scale(1);opacity:1}
+.card,.fav{transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.card:hover,.fav:hover{transform:translateY(-6px)}
+.card-img,.fav-img{will-change:clip-path}
+.work-row{transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.work-row:hover{transform:translateX(10px)}
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{animation:none}
+  .card:hover,.fav:hover,.work-row:hover{transform:none}
+}
