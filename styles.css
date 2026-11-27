@@ -93,7 +93,7 @@ header.on-light .menu-btn{background:var(--dark);color:var(--cream)}
 
 /* sections */
 .sec{position:relative;padding:150px var(--pad-r) 130px var(--pad-l)}
-.sec-label{position:absolute;left:3.4vw;top:158px;font-size:12.5px;letter-spacing:.15em;font-weight:600;color:var(--grey)}
+.sec-label{position:absolute;left:3.4vw;top:116px;font-size:12.5px;letter-spacing:.15em;font-weight:600;color:var(--grey)}
 .sec h2,.foot-h{font-size:86px;font-weight:900;line-height:1.02;letter-spacing:-.02em}
 .dark-h{color:var(--dark)}
 .light{background:var(--cream);color:var(--dark)}
@@ -151,7 +151,7 @@ header.on-light .menu-btn{background:var(--dark);color:var(--cream)}
 .fav-meta{margin-top:22px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--grey)}
 .status{font-weight:600}
 .status.on{color:var(--ink)}
-.status.dev{background:#222;border-radius:999px;padding:7px 14px;color:var(--ink)}
+.status.dev{background:#3d3d3a;border-radius:999px;padding:7px 14px;color:#fff}
 .status.dev::first-letter{color:var(--accent)}
 
 /* experience */
